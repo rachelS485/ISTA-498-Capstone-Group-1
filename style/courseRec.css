@@ -1,0 +1,133 @@
+/* *** NOTES ***
+logo in footer is actually text-aligned = center but right margin is 700
+and wihtout the overflox x hidden on line 10, if the the window gets
+smaller, it will show extra white space on the rigt side, if there is a
+problem  because of the logo, take it out */
+
+
+ body {
+    background-color: white;
+    margin: 0;
+    padding: 0;
+    overflow-y: scroll;
+  }
+
+  #title {
+    position: absolute;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    color: #0C234B;
+    top: 110px;
+    margin-left: 94px;
+    width: 250px;
+    height: 44px;
+  }
+
+  #logo1 {
+    position: absolute;
+    top: 70px;
+    margin-left: 85px;
+    width: 245px;
+    height: 44px;
+  }
+
+  #logo2 {
+    
+    position: absolute;
+    width: 198px;
+    height: 35.904px;
+    top: 60px;
+    left: 30px;
+  }
+  
+  #topLogo {
+    position: relative;
+    left: 50px;
+    top: 8px;
+    width: 300px;
+    height: 35px;
+  }
+
+
+
+  #top {
+    position: absolute;
+    background-color: #a70d26;
+    color: white;
+    width: 100%;
+    height: 50px;
+    margin: 0;
+    padding: 0;
+    /* visibility: hidden; */
+  }
+
+  #bottom {
+    background-color: beige;
+    position: relative;
+    
+    margin: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 100%;
+    height: 198.59px;
+    bottom: 0%;
+    line-height: 1px;
+  }
+
+  p {
+    text-align: right;
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+
+  #content {
+    display: inline-block;
+    background-color: #4b0f0c00;
+    position: absolute;
+    text-align: center;
+    padding: 0;
+    width: 100%;
+    height: 320px;
+    top: 155px;
+    /* visibility: hidden; */
+  }
+
+  .area {
+    
+    display: inline-block;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    
+  }
+  .interestTitle {
+    padding: 5px;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    width: 90px;
+    height: 40px;
+    text-align: center;
+    line-height: 0px;
+    color: white;
+    background-color: #0C234B;
+    border-radius: 3px;
+  }
+  .interestClasses {
+    position: relative;
+    text-align: center;
+    margin-top: 7px;
+    margin-bottom: 15px;
+    background-color: #61ff3e62;
+    width: 200px;
+    height: 250px;
+    right: 47.5px;
+  }
+
+  #UnivNameLogo {
+    position: absolute;
+    color: white;
+    text-align: left;
+    top: 10px;
+    left: 80px;
+    margin: 0;
+    padding: 0;
+  }
