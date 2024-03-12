@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title> Create a four-year plan </title>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        
+        font-family: Arial, sans-serif;
+    }
+
+    .red-bar {
+        background-color: #8B0015;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .logo {
+        height: 30px;
+    }
+
+    .school-logo {
+        margin-left: 20px;
+        height: 50px;
+    }
+
+    .school-logo2 {
+        margin-left: 40px;
+        margin-left: 0;
+        height: 30px;
+    }
+
+    .text-main {
+        margin-left: 40px;
+        color: darkblue;
+    }
+
+    p {
+      margin: 0;
+      color: black;
+    }
+    
+	.text-bar {
+	    position: fixed;
+	    bottom: 0;
+	    right: 0;
+	    background-color: #F5F5DC;
+	    padding: 10px;
+	    list-style: none;
+	    color: black;
+	    text-align: right;
+	    font-size: 14px;
+	    color: #333;
+	}
+	
+	
+	
+	.beige-bar {
+	    background-color: #F5F5DC;
+	    height: 200px;
+	    position: fixed;
+	    bottom: 0;
+	    width: 100%;
+	    display: flex;
+	    justify-content: flex-start;
+	    align-items: center;
+	    padding-left: 20px;
+	}
+	
+	.labeling {
+	    margin-bottom: 120px;
+	    margin-left: 40px;
+	}
+	
+	.collapsible {
+	padding-left:140px;
+  background-color: #777;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 50%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.active, .collapsible:hover {
+  background-color: #555;
+}
+
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  width:40%;
+  background-color: #f1f1f1;
+}
+
+</style>
+</head>
+<body>
+
+<div class="red-bar">
+    <img src="ua_wordmark_line_logo_white_rgb.min.svg" alt="UA Logo" class="logo">
+</div>
+
+<img src="SchoolOfInformation.png" alt="School of Information Logo" class="school-logo">
+<p class="text-main"> Create a four-year plan </p>
+<p class="text-main"> Search courses | Course recommendation | Resources Link</p>
+
+ <label class="labeling" for="termsDropdown">Select a Term:</label>
+  <select id="termsDropdown" name="terms">
+    <option value="term1">Term 1</option>
+    <option value="term2">Term 2</option>
+    <option value="term3">Term 3</option>
+  </select>
+
+
+
+
+<h2> Four Year Plan</h2>
+
+
+<button type="button" class="collapsible">Year 1 </button>
+<div class="content">
+  <p>ISTA 130.</p>
+</div>
+
+<button type="button" class="collapsible"> Year 2</button>
+<div class="content">
+  <p>ISTA 100.</p>
+</div>
+
+
+<button type="button" class="collapsible">Year 3</button>
+
+
+
+<div class="content">
+  <p>ISTA 300</p>
+</div>
+
+<button type="button" class="collapsible">Year 4 </button>
+<div class="content">
+  <p>ISTA 498 </p>
+</div>
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+</script>
+
+
+
+<div class="beige-bar">
+    <img src="SchoolOfInformation2.png" alt="School of Information Logo" class="school-logo2">
+    <div class="text-bar">
+        <p>School of Information</p>
+        <p>1103 E. 2nd St., Rm. 409 (Harvill Building)</p>
+        <p>P.O. Box 210076</p>
+        <p>Tucson, Arizona 85721</p>
+        <p>Contact Us | <a href="mailto:si_info@arizona.edu">si_info@arizona.edu</a> | 520-621-3565</p>
+        <p>A member of the iSchools consortium.</p>
+        <p>Emergency Information</p>
+        <p>UAlert</p>
+        <p>Information Security & Privacy</p>
+        <p>Campus Accessibility</p>
+    </div>
+</div>
+
+</body>
+</html>
