@@ -1,8 +1,4 @@
-/* *** NOTES ***
-logo in footer is actually text-aligned = center but right margin is 700
-and wihtout the overflox x hidden on line 10, if the the window gets
-smaller, it will show extra white space on the rigt side, if there is a
-problem  because of the logo, take it out */
+
 
 
  body {
