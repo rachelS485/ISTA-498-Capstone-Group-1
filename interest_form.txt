@@ -1,0 +1,71 @@
+1. What year are you in?
+    Freshman 
+    Sophomore 
+    Junior 
+    Senior 
+
+2. Pick an emphasis 
+    Data Science 
+    Interactive and Immersive Technologies
+
+3. What programming languages are you most interested in exploring further?
+    Python
+    Java
+    C++
+    JavaScript
+    R
+    SQL
+
+4. Which technology domain appeals to you the most?
+    Artificial Intelligence/Machine Learning
+    Cybersecurity
+    Data Science/Big Data Analytics
+    Mobile App Development
+
+5. What type of projects do you enjoy working on the most?
+    Software/application development
+    Network/system administration
+    Web development
+    Data analysis and visualization 
+
+6. Which aspect of technology interests you the most?
+    Creating innovative solutions to real-world problems
+    Ensuring the security and integrity of digital systems
+    Analyzing and interpreting large datasets to derive insights
+    Designing user-friendly interfaces and experiences
+
+7. What role do you envision yourself in within the tech industry?
+    Software Developer/Engineer
+    Cybersecurity Analyst
+    Data Scientist
+    UX/UI Designer
+
+8. Which technical skill do you prioritize developing further?
+    Programming and software development
+    Network and system administration
+    Data analysis and interpretation
+    User interface design and usability testing
+
+9. What type of technology-related project would you like to undertake?
+    Developing a mobile app to address a specific need
+    Implementing security measures to protect sensitive data
+    Analyzing trends in user behavior based on collected data
+    Creating a virtual reality experience for immersive learning
+
+10. Which technology industry excites you the most?
+    Tech startups and entrepreneurship
+    Information technology (IT) consulting
+    Research and development in emerging technologies
+    Entertainment/gaming industry
+
+11. How do you prefer to learn about new technologies?
+    Online courses and tutorials
+    Hands-on projects and experimentation
+
+12. Which technology-related hobby or activity are you most likely to spend your free time on?
+    Coding or programming personal projects
+    Experimenting with gadgets and electronics
+    Designing and creating digital art or graphics
+    Analyzing data sets or playing with statistics
+
+
