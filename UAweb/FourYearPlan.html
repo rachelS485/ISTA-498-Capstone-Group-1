@@ -89,9 +89,7 @@
   font-size: 15px;
 }
 
-.active, .collapsible:hover {
-  background-color: #555;
-}
+
 
 .content {
   padding: 0 18px;
@@ -100,6 +98,27 @@
   width:40%;
   background-color: #f1f1f1;
 }
+
+
+.container {
+      display: flex;
+    }
+
+    .year {
+      flex: 1;
+      padding: 10px;
+      border: 1px solid #ccc;
+      margin: 10px;
+      min-height: 200px;
+    }
+
+    .class-box {
+      background-color: #f0f0f0;
+      padding: 10px;
+      margin: 5px;
+      width : 100px;
+      cursor: move;
+    }
 
 </style>
 </head>
@@ -121,69 +140,68 @@
   </select>
 
 
+<!--  8 boxes to represent each year  and button to add another box   + ( add delelt or rest)-->
 
 
-<h2> Four Year Plan</h2>
+<  <h2>Four Year Plan</h2>
 
+<div id="math120" class="class-box" draggable="true" ondragstart="drag(event)">Math 120</div>
+<div id="math129" class="class-box" draggable="true" ondragstart="drag(event)">Math 129</div>
+<div id="math110" class="class-box" draggable="true" ondragstart="drag(event)">Math 110</div>
+<div id="math1230" class="class-box" draggable="true" ondragstart="drag(event)">Math 1230</div>
 
-<button type="button" class="collapsible">Year 1 </button>
-<div class="content">
-  <p>ISTA 130.</p>
+<div class="container">
+  <div id="year1" class="year" ondrop="drop(event)" ondragover="allowDrop(event)">
+    <h2>Year 1</h2>
+  </div>
+
+  <div id="year2" class="year" ondrop="drop(event)" ondragover="allowDrop(event)">
+    <h2>Year 2</h2>
+  </div>
 </div>
 
-<button type="button" class="collapsible"> Year 2</button>
-<div class="content">
-  <p>ISTA 100.</p>
-</div>
-
-
-<button type="button" class="collapsible">Year 3</button>
-
-
-
-<div class="content">
-  <p>ISTA 300</p>
-</div>
-
-<button type="button" class="collapsible">Year 4 </button>
-<div class="content">
-  <p>ISTA 498 </p>
+<div>
+  <button onclick="resetPlan()">Reset</button>
 </div>
 
 <script>
-var coll = document.getElementsByClassName("collapsible");
-var i;
+    var originalParents = {}; 
 
-for (i = 0; i < coll.length; i++) {
-  coll[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var content = this.nextElementSibling;
-    if (content.style.display === "block") {
-      content.style.display = "none";
-    } else {
-      content.style.display = "block";
-    }
+function allowDrop(event) {
+  event.preventDefault();
+}
+
+function drag(event) {
+  event.dataTransfer.setData("text", event.target.id);
+}
+
+function drop(event) {
+  event.preventDefault();
+  var data = event.dataTransfer.getData("text");
+  var draggedElement = document.getElementById(data);
+  var destination = event.target;
+
+  if (destination.classList.contains("year")) {
+    destination.appendChild(draggedElement);
+  }
+}
+
+function resetPlan() {
+  Object.keys(originalParents).forEach(function(key) {
+    var originalParent = originalParents[key];
+    var button = document.getElementById(key);
+    originalParent.appendChild(button);
+  });
+}
+
+window.onload = function() {
+  var draggableElements = document.querySelectorAll('.class-box');
+  draggableElements.forEach(function(element) {
+    originalParents[element.id] = element.parentElement;
   });
 }
 </script>
 
-
-
-<div class="beige-bar">
-    <img src="SchoolOfInformation2.png" alt="School of Information Logo" class="school-logo2">
-    <div class="text-bar">
-        <p>School of Information</p>
-        <p>1103 E. 2nd St., Rm. 409 (Harvill Building)</p>
-        <p>P.O. Box 210076</p>
-        <p>Tucson, Arizona 85721</p>
-        <p>Contact Us | <a href="mailto:si_info@arizona.edu">si_info@arizona.edu</a> | 520-621-3565</p>
-        <p>A member of the iSchools consortium.</p>
-        <p>Emergency Information</p>
-        <p>UAlert</p>
-        <p>Information Security & Privacy</p>
-        <p>Campus Accessibility</p>
-    </div>
-</div>
 
 </body>
 </html>

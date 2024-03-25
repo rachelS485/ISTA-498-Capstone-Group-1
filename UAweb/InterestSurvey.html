@@ -1,10 +1,356 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<title>Interest Survey</title>
+
+    <meta charset="UTF-8" />
+    <title>UAC Interest Survey</title>
+    <style>
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        
+        }
+        
+        #top {
+            top: 0px;
+            position: absolute;
+            background-color: #a70d26;
+            color: white;
+            width: 100%;
+            height: 50px;
+            margin: 0;
+            padding: 0;
+            
+        }
+        
+        #nameLogo {
+            position: relative;
+            left: 50px;
+            top: 8px;
+            width: 300px;
+            height: 35px;
+        
+        }
+        
+        #logoTop {
+            position: absolute;
+            top: 70px;
+            left: 3px;
+            margin-left: 85px;
+            width: 245px;
+            height: 44px;
+        
+        }
+        
+        #title {
+            position: absolute;
+            font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+            color: #0C234B;
+            top: 110px;
+            margin-left: 94px;
+            width: 250px;
+            height: 44px;
+        
+        }
+        
+        #forms {
+            position: relative;
+            top: 155px;
+            width: 70%;
+        
+        }
+        
+        .question, .options {
+            position: relative;
+            left: 130px;
+            font-size: 16px;
+        
+        }
+        
+        .options {
+            margin-bottom: 15px;
+        
+        }
+        
+        #submitButton {
+            position: relative;
+            top: 25px;
+            left: 134px;
+        
+        }
+        
+        #bottom {
+            background-color: beige;
+            position: relative;
+            margin: 0;
+            padding-top: 10px;
+            padding-bottom: 15px;
+            width: 100%;
+            height: 198.59px;
+            bottom: 0%;
+            line-height: 1px;
+            top: 220px;
+        
+        }
+        
+        #logoBottom {
+            position: absolute;
+            width: 198px;
+            height: 35.904px;
+            top: 60px;
+            left: 30px;
+        
+        }
+        
+        .footerText {
+            text-align: right;
+            line-height: 4px;
+            padding-right: 10px;
+            padding-left: 10px;
+            
+        }
+
+        </style>
+    <link rel="stylesheet" type="text/css" href="../style/interestSurv.css">
+    <script src="../scripts/interestSurv.js">
+
+
+
+
+    </script>
+
 </head>
-<body>
+
+<body id="body">
+
+    <div id="top" >
+        <img id="nameLogo" src="../style/images/ua_wordmark_line_logo_white_rgb.min.svg" alt="University of Arizona">
+
+    </div>
+
+    <img id="logoTop" src="../style/images/iSchoolLogo.png" alt="School of Information">
+
+    <h3 id="title">
+        Interest Survey
+    </h3>
+
+
+    <!--  All button are check box  -->
+    <div id="forms">
+
+        <form>
+
+            <!-- Question 1
+            <h4 class="question">1. What year are you in?</h4>
+
+            <input type="radio" id="1A" class="options" name="year_status" value="Freshman">
+            <label for="1A" class="options">Freshman</label><br>
+
+            <input type="radio" id="1B" class="options" name="year_status" value="Sophomore">
+            <label for="1B" class="options">Sophomore</label><br>
+
+            <input type="radio" id="1C" class="options" name="year_status" value="Junior">
+            <label for="1C" class="options">Junior</label><br>
+
+            <input type="radio" id="1D" class="options" name="year_status" value="Senior">
+            <label for="1D" class="options">Senior</label> -->
+
+
+            <!-- Question 2 -->
+            <h4 class="question">2. Pick an emphasis:</h4>
+
+            <input type="radio" id="2A" class="options" name="emphasis" value="Data Science">
+            <label for="2D" class="options">Data Science</label><br>
+
+            <input type="radio" id="2B" class="options" name="emphasis" value="Interactive and Immersive Technologies">
+            <label for="2B" class="options">Interactive and Immersive Technologies</label>
+
+
+            <!-- Question 3 -->
+            <h4 class="question">3. What programming languages are you most interested in exploring further?</h4>
+
+            <input type="checkbox" id="3A" class="options" name="program_languages" value="Python">
+            <label for="3A" class="options">Python</label><br>
+
+            <input type="checkbox" id="3B" class="options" name="program_languages" value="Java">
+            <label for="3B" class="options">Java</label><br>
+
+            <input type="checkbox" id="3C" class="options" name="program_languages" value="C++">
+            <label for="3C" class="options">C++</label><br>
+
+            <input type="checkbox" id="3D" class="options" name="program_languages" value="JavaScript">
+            <label for="3D" class="options">JavaScript</label><br>
+
+            <input type="checkbox" id="3E" class="options" name="program_languages" value="R">
+            <label for="3E" class="options">R</label><br>
+
+            <input type="checkbox" id="3F" class="options" name="program_languages" value="SQL">
+            <label for="3F" class="options">SQL</label>
+
+
+            <!-- Question 4 -->
+            <h4 class="question">4. Which technology domain appeals to you the most?</h4>
+
+            <input type="radio" id="4A" class="options" name="tech_domain" value="Artificial Intelligence/Machine Learning">
+            <label for="4A" class="options">Artificial Intelligence/Machine Learning</label><br>
+
+            <input type="radio" id="4B" class="options" name="tech_domain" value="Cybersecurity">
+            <label for="4B" class="options">Cybersecurity</label><br>
+
+            <input type="radio" id="4C" class="options" name="tech_domain" value="Data Science/Big Data Analytics">
+            <label for="4C" class="options">Data Science/Big Data Analytics</label><br>
+
+            <input type="radio" id="4D" class="options" name="tech_domain" value="Mobile App Development">
+            <label for="4D" class="options">Mobile App Development</label>
+
+
+            <!-- Question 5 -->
+            <h4 class="question">5. What type of projects do you enjoy working on the most?</h4>
+
+            <input type="radio" id="5A" class="options" name="projects" value="Software/application development">
+            <label for="5A" class="options">Software/application development</label><br>
+
+            <input type="radio" id="5B" class="options" name="projects" value="Network/system administration">
+            <label for="5B" class="options">Network/system administration</label><br>
+            
+            <input type="radio" id="5C" class="options" name="projects" value="Web development">
+            <label for="5C" class="options">Web development</label><br>
+
+            <input type="radio" id="5D" class="options" name="projects" value="Data analysis and visualization">
+            <label for="5D" class="options">Data analysis and visualization</label>
+
+
+            <!-- Question 6 -->
+            <h4 class="question">6. Which aspect of technology interests you the most?</h4>
+
+            <input type="radio" id="6A" class="options" name="tech_aspect" value="Creating innovative solutions to real-world problems">
+            <label for="6A" class="options">Creating innovative solutions to real-world problems</label><br>
+
+            <input type="radio" id="6B" class="options" name="tech_aspect" value="Ensuring the security and integrity of digital systems">
+            <label for="6B" class="options">Ensuring the security and integrity of digital systems</label><br>
+
+            <input type="radio" id="6C" class="options" name="tech_aspect" value="Analyzing and interpreting large datasets to derive insights">
+            <label for="6C" class="options">Analyzing and interpreting large datasets to derive insights</label><br>
+
+            <input type="radio" id="6D" class="options" name="tech_aspect" value="Designing user-friendly interfaces and experiences">
+            <label for="6D" class="options">Designing user-friendly interfaces and experiences</label>
+
+
+            <!-- Question 7 -->
+            <h4 class="question">7. What role do you envision yourself in within the tech industry?</h4>
+
+            <input type="radio" id="7A" class="options" name="tech_envision" value="Software Developer/Engineer">
+            <label for="7A" class="options">Software Developer/Engineer</label><br>
+
+            <input type="radio" id="7B" class="options" name="tech_envision" value="Cybersecurity Analyst">
+            <label for="7B" class="options">Cybersecurity Analyst</label><br>
+
+            <input type="radio" id="7C" class="options" name="tech_envision" value="Data Scientist">
+            <label for="7C" class="options">Data Scientist</label><br>
+
+            <input type="radio" id="7D" class="options" name="tech_envision" value="UX/UI Designer">
+            <label for="7D" class="options">UX/UI Designer</label>
+
+
+            <!-- Question 8 -->
+            <h4 class="question">8. Which technical skill do you prioritize developing further?</h4>
+
+            <input type="radio" id="8A" class="options" name="tech_skill" value="Programming and software development">
+            <label for="8A" class="options">Programming and software development</label><br>
+
+            <input type="radio" id="8B" class="options" name="tech_skill" value="Network and system administration">
+            <label for="8B" class="options">Network and system administration</label><br>
+
+            <input type="radio" id="8C" class="options" name="tech_skill" value="Data analysis and interpretation">
+            <label for="8C" class="options">Data analysis and interpretation</label><br>
+
+            <input type="radio" id="8D" class="options" name="tech_skill" value="User interface design and usability testing">
+            <label for="8D" class="options">User interface design and usability testing</label>
+
+
+            <!-- Question 9 -->
+            <h4 class="question">9. What type of technology-related project would you like to undertake?</h4>
+
+            <input type="radio" id="9A" class="options" name="project_undetake" value="Developing a mobile app to address a specific need">
+            <label for="9A" class="options">Developing a mobile app to address a specific need</label><br>
+
+            <input type="radio" id="9B" class="options" name="project_undetake" value="Implementing security measures to protect sensitive data">
+            <label for="9B" class="options">Implementing security measures to protect sensitive data</label><br>
+
+            <input type="radio" id="9C" class="options" name="project_undetake" value="Analyzing trends in user behavior based on collected data">
+            <label for="9C" class="options">Analyzing trends in user behavior based on collected data</label><br>
+
+            <input type="radio" id="9D" class="options" name="project_undetake" value="Creating a virtual reality experience for immersive learning">
+            <label for="9D" class="options">Creating a virtual reality experience for immersive learning</label>
+
+
+            <!-- Question 10 -->
+            <h4 class="question">10. Which technology industry excites you the most?</h4>
+
+            <input type="radio" id="10A" class="options" name="excite_tech" value="Tech startups and entrepreneurship">
+            <label for="10A" class="options">Tech startups and entrepreneurship</label><br>
+
+            <input type="radio" id="10B" class="options" name="excite_tech" value="Information technology (IT) consulting">
+            <label for="10B" class="options">Information technology (IT) consulting</label><br>
+
+            <input type="radio" id="10C" class="options" name="excite_tech" value="Research and development in emerging technologies">
+            <label for="10C" class="options">Research and development in emerging technologies</label><br>
+
+            <input type="radio" id="10D" class="options" name="excite_tech" value="Entertainment/gaming industry">
+            <label for="10D" class="options">Entertainment/gaming industry</label>
+
+
+            <!-- Question 11 -->
+            <h4 class="question">11. How do you prefer to learn about new technologies?</h4>
+
+            <input type="radio" id="11A" class="options" name="new_tech" value="Online courses and tutorials">
+            <label for="11A" class="options">Online courses and tutorials</label><br>
+
+            <input type="radio" id="11B" class="options" name="new_tech" value="Hands-on projects and experimentation">
+            <label for="11B" class="options">Hands-on projects and experimentation</label>
+
+
+            <!-- Question 12 -->
+            <h4 class="question">12. Which technology-related hobby or activity are you most likely to spend your free time on?</h4>
+
+            <input type="radio" id="12A" class="options" name="hobby" value="Coding or programming personal projects">
+            <label for="12A" class="options">Coding or programming personal projects</label><br>
+
+            <input type="radio" id="12B" class="options" name="hobby" value="Experimenting with gadgets and electronics">
+            <label for="12B" class="options">Experimenting with gadgets and electronics</label><br>
+
+            <input type="radio" id="12C" class="options" name="hobby" value="Designing and creating digital art or graphics">
+            <label for="12C" class="options">Designing and creating digital art or graphics</label><br>
+
+            <input type="radio" id="12D" class="options" name="hobby" value="Analyzing data sets or playing with statistics">
+            <label for="12D" class="options">Analyzing data sets or playing with statistics</label><br>
+
+
+            <!-- Submit button -->
+            <input type="submit" id="submitButton" value="Submit">
+
+        </form>
+
+    </div>
+
+    <div id="bottom">
+        <img id="logoBottom" src="../style/images/iSchoolLogo.png" alt="School of Information">
+
+        <p class="footerText">School of Information</p>
+        <p class="footerText">1103 E. 2nd St., Rm. 409 (Harvill Building)</p>
+        <p class="footerText">P.O. Box 210076</p>
+        <p class="footerText">Tucson, Arizona 85721</p>
+        <p class="footerText">Contact Us | <a href=“mailto:si_info@arizona.edu”>si_info@arizona.edu</a> | 520-621-3565</p>
+        <p class="footerText">A member of the iSchools consortium.</p>
+        <p class="footerText">Emergency Information</p>
+        <p class="footerText">UAlert</p>
+        <p class="footerText">Information Security & Privacy</p>
+        <p class="footerText">Campus Accessibility</p>
+    </div>
 
 </body>
+
 </html>
