@@ -1,10 +1,6 @@
 import numpy as np
 from sklearn.metrics.pairwise import cosine_similarity
 import spacy
-from Course_Webscrapping_and_Dataframe import data_science
-from Course_Webscrapping_and_Dataframe import immersive_tech
-from Course_Webscrapping_and_Dataframe import comp_arts
-from Course_Webscrapping_and_Dataframe import soc
 
 # Load Spacy model
 nlp = spacy.load("en_core_web_lg")
@@ -14,14 +10,32 @@ def get_course_descriptions():
     immers_course_descript = []
     arts_course_descript = []
     soc_course_descript = []
-    for data_course in data_science:
-        data_course_descript.append(data_course[0] + " : " + data_course[1])
-    for immerse_course in immersive_tech:
-        immers_course_descript.append(immerse_course[0] + " : " + immerse_course[1])
-    for arts_course in comp_arts:
-        arts_course_descript.append(arts_course[0] + " : " + arts_course[1])
-    for soc_course in soc:
-        soc_course_descript.append(soc_course[0] + " : " + soc_course[1])
+
+    #Using relative path .\\
+    data_file = open('.\\data_courses.txt', 'r')
+    for line in data_file:
+        line = line.strip().split(' : ')
+        data_course_descript.append(line[0] + " : " + line[1].lower())
+    data_file.close()
+
+    immersive_file = open('.\\immersive_courses.txt', 'r')
+    for line in immersive_file:
+        line = line.strip().split(' : ')
+        immers_course_descript.append(line[0] + " : " + line[1].lower())
+    immersive_file.close()
+    
+    arts_file = open('.\\arts_courses.txt', 'r')
+    for line in arts_file:
+        line = line.strip().split(' : ')
+        arts_course_descript.append(line[0] + " : " + line[1].lower())
+    arts_file.close()
+
+    society_file = open('.\\soc_courses.txt', 'r')
+    for line in society_file:
+        line = line.strip().split(' : ')
+        soc_course_descript.append(line[0] + " : " + line[1].lower())
+    society_file.close()
+   
     return  data_course_descript, immers_course_descript, arts_course_descript, soc_course_descript
 
 
@@ -107,18 +121,22 @@ def find_matching_society_courses(search_description, society_courses, num_cours
 
 def main():
     # Sample search description
-    search_description = "nlp"
+    data_search_description = "machine learning artificial intelligence data science"
+    immersive_search_description = "human computer interaction creative code"
+    arts_search_description = "arts"
+    society_search_description = "identity"
     data, immersive, arts, society = get_course_descriptions()
+    top_data_matches = find_matching_data_courses(data_search_description, data, 5)
     
-    top_data_matches = find_matching_data_courses(search_description, data, 5)
-    top_immersive_matches = find_matching_immersive_courses(search_description, immersive, 5)
-    top_arts_matches = find_matching_arts_courses(search_description, arts, 3)
-    top_society_matches = find_matching_society_courses(search_description, society, 3)
+    top_immersive_matches = find_matching_immersive_courses(immersive_search_description, immersive, 5)
 
+    top_arts_matches = find_matching_arts_courses(arts_search_description, arts, 3)
+    top_society_matches = find_matching_society_courses(society_search_description, society, 3)
     # Print top matching courses
     print("Top matching courses:")
-    for course, similarity in top_data_matches:
+    for course, similarity in top_arts_matches:
         print(f"Course: {course}, Similarity: {similarity}")
+    
 
 
 main()

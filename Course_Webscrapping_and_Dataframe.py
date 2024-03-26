@@ -6,8 +6,6 @@ from selenium.webdriver.support import expected_conditions as EC
 
 driver = webdriver.Chrome()
 
-courses = "https://catalog.arizona.edu/courses?page=1&cq="
-driver.get(courses)
 
 core_courses= ["ISTA116", "ISTA130","ISTA131","ISTA161"]
 emphasis_datascience= ["ESOC 414","ISTA311","ISTA320","ISTA321","ISTA322","ISTA331","ISTA350","ISTA355","ISTA410","ISTA421","ISTA429","ISTA431","ISTA439","ISTA450","ISTA455","ISTA456","ISTA457","LIS470"]
@@ -29,7 +27,7 @@ engange = []
 ##### CORE COURSES #########
 ##ISTA 100
 courses =  "https://catalog.arizona.edu/courses?page=1&cq="+"ISTA100"
-driver.implicitly_wait(5)
+driver.implicitly_wait(7)
 driver.get(courses)
     
 #Pressing the course button
@@ -61,7 +59,7 @@ core.append([name.text,desc.text,unit.text])
 
 ##ISTA 116
 courses = "https://catalog.arizona.edu/courses?page=1&cq=" + "ISTA116"
-driver.implicitly_wait(5)
+driver.implicitly_wait(7)
 driver.get(courses)
     
 #Pressing the course button
@@ -91,7 +89,7 @@ core.append([name.text,desc.text,unit.text])
 
 ##ISTA 130
 courses =  "https://catalog.arizona.edu/courses?page=1&cq="+"ISTA130"
-driver.implicitly_wait(5)
+driver.implicitly_wait(7)
 driver.get(courses)
     
 #Pressing the course button
@@ -121,7 +119,7 @@ core.append([name.text,desc.text,unit.text])
 
 ##ISTA 131
 courses =  "https://catalog.arizona.edu/courses?page=1&cq="+"ISTA131"
-driver.implicitly_wait(5)
+driver.implicitly_wait(7)
 driver.get(courses)
     
 #Pressing the course button
@@ -151,7 +149,7 @@ core.append([name.text,desc.text,unit.text])
 
 ##ISTA 161
 courses =  "https://catalog.arizona.edu/courses?page=1&cq="+"ISTA161"
-driver.implicitly_wait(5)
+driver.implicitly_wait(7)
 driver.get(courses)
     
 #Pressing the course button
@@ -184,7 +182,7 @@ core.append([name.text,desc.text,unit.text])
 
 ##ESOC 414
 courses =  "https://catalog.arizona.edu/courses?page=1&cq="+"ESOC414"
-driver.implicitly_wait(5)
+driver.implicitly_wait(7)
 driver.get(courses)
     
 #Pressing the course button
@@ -214,7 +212,7 @@ data_science.append([name.text,desc.text,unit.text])
 
 ##ISTA 311
 courses =  "https://catalog.arizona.edu/courses?page=1&cq="+"ISTA311"
-driver.implicitly_wait(5)
+driver.implicitly_wait(7)
 driver.get(courses)
     
 #Pressing the course button
@@ -244,7 +242,7 @@ data_science.append([name.text,desc.text,unit.text])
 
 ##ISTA 320
 courses =  "https://catalog.arizona.edu/courses?page=1&cq="+"ISTA320"
-driver.implicitly_wait(5)
+driver.implicitly_wait(7)
 driver.get(courses)
     
 #Pressing the course button
@@ -274,7 +272,7 @@ data_science.append([name.text,desc.text,unit.text])
 
 ##ISTA 321
 courses =  "https://catalog.arizona.edu/courses?page=1&cq="+"ISTA321"
-driver.implicitly_wait(5)
+driver.implicitly_wait(7)
 driver.get(courses)
 #Pressing the course button
 course_btn_path = '//*[@id="courses-list"]/div/div[2]/div/button'
@@ -303,7 +301,7 @@ data_science.append([name.text,desc.text,unit.text])
 
 ##ISTA 322
 courses =  "https://catalog.arizona.edu/courses?page=1&cq="+"ISTA322"
-driver.implicitly_wait(5)
+driver.implicitly_wait(7)
 driver.get(courses)
 
 #Pressing the course button
@@ -333,7 +331,7 @@ data_science.append([name.text,desc.text,unit.text])
 
 ##ISTA 331
 courses =  "https://catalog.arizona.edu/courses?page=1&cq="+ "ISTA331"
-driver.implicitly_wait(5)
+driver.implicitly_wait(7)
 driver.get(courses)
     
 #Pressing the course button
@@ -363,7 +361,7 @@ data_science.append([name.text,desc.text,unit.text])
 
 ##ISTA 350
 courses =  "https://catalog.arizona.edu/courses?page=1&cq="+ "ISTA350"
-driver.implicitly_wait(5)
+driver.implicitly_wait(7)
 driver.get(courses)
     
 #Pressing the course button
@@ -393,7 +391,7 @@ data_science.append([name.text,desc.text,unit.text])
 
 ##ISTA 355
 courses =  "https://catalog.arizona.edu/courses?page=1&cq="+ "ISTA355"
-driver.implicitly_wait(5)
+driver.implicitly_wait(7)
 driver.get(courses)
     
 #Pressing the course button
@@ -423,7 +421,7 @@ data_science.append([name.text,desc.text,unit.text])
 
 ##ISTA 410
 courses =  "https://catalog.arizona.edu/courses?page=1&cq="+ "ISTA410"
-driver.implicitly_wait(5)
+driver.implicitly_wait(7)
 driver.get(courses)
     
 #Pressing the course button
@@ -453,7 +451,7 @@ data_science.append([name.text,desc.text,unit.text])
 
 ##ISTA 421
 courses =  "https://catalog.arizona.edu/courses?page=1&cq="+ "ISTA421"
-driver.implicitly_wait
+driver.implicitly_wait(7)
 driver.get(courses)
     
 #Pressing the course button
@@ -483,7 +481,7 @@ data_science.append([name.text,desc.text,unit.text])
 
 ##ISTA 429
 courses =  "https://catalog.arizona.edu/courses?page=1&cq="+ "ISTA429"
-driver.implicitly_wait(5)
+driver.implicitly_wait(7)
 driver.get(courses)
     
 #Pressing the course button
@@ -513,7 +511,7 @@ data_science.append([name.text,desc.text,unit.text])
 
 ##ISTA 431
 courses =  "https://catalog.arizona.edu/courses?page=1&cq="+ "ISTA431"
-driver.implicitly_wait(5)
+driver.implicitly_wait(7)
 driver.get(courses)
     
 #Pressing the course button
@@ -544,7 +542,7 @@ data_science.append([name.text,desc.text,unit.text])
 
 ##ISTA 439
 courses =  "https://catalog.arizona.edu/courses?page=1&cq="+ "ISTA439"
-driver.implicitly_wait(5)
+driver.implicitly_wait(7)
 driver.get(courses)
     
 #Pressing the course button
@@ -574,7 +572,7 @@ data_science.append([name.text,desc.text,unit.text])
 
 ##ISTA 450
 courses =  "https://catalog.arizona.edu/courses?page=1&cq="+ "ISTA450"
-driver.implicitly_wait(5)
+driver.implicitly_wait(7)
 driver.get(courses)
     
 #Pressing the course button
@@ -604,7 +602,7 @@ data_science.append([name.text,desc.text,unit.text])
 
 ##ISTA 455
 courses =  "https://catalog.arizona.edu/courses?page=1&cq="+ "ISTA455"
-driver.implicitly_wait(5)
+driver.implicitly_wait(7)
 driver.get(courses)
     
 #Pressing the course button
@@ -634,7 +632,7 @@ data_science.append([name.text,desc.text,unit.text])
 
 ##ISTA 456
 courses =  "https://catalog.arizona.edu/courses?page=1&cq="+ "ISTA456"
-driver.implicitly_wait(5)
+driver.implicitly_wait(7)
 driver.get(courses)
     
 #Pressing the course button
@@ -664,7 +662,7 @@ data_science.append([name.text,desc.text,unit.text])
 
 ##ISTA 457
 courses =  "https://catalog.arizona.edu/courses?page=1&cq="+ "ISTA457"
-driver.implicitly_wait(5)
+driver.implicitly_wait(7)
 driver.get(courses)
     
 #Pressing the course button
@@ -694,7 +692,7 @@ data_science.append([name.text,desc.text,unit.text])
 
 ##LIS 470
 courses =  "https://catalog.arizona.edu/courses?page=1&cq="+ "LIS470"
-driver.implicitly_wait(5)
+driver.implicitly_wait(7)
 driver.get(courses)
     
 #Pressing the course button
@@ -727,7 +725,7 @@ data_science.append([name.text,desc.text,unit.text])
 
 ##GAME 425
 courses =  "https://catalog.arizona.edu/courses?page=1&cq="+"GAME425"
-driver.implicitly_wait(5)
+driver.implicitly_wait(7)
 driver.get(courses)
     
 #Pressing the course button
@@ -756,7 +754,7 @@ immersive_tech.append([name.text,desc.text,unit.text])
 
 ##GAME 451
 courses =  "https://catalog.arizona.edu/courses?page=1&cq="+"GAME451"
-driver.implicitly_wait(5)
+driver.implicitly_wait(7)
 driver.get(courses)
     
 #Pressing the course button
@@ -786,7 +784,7 @@ immersive_tech.append([name.text,desc.text,unit.text])
 
 ##ISTA 303
 courses =  "https://catalog.arizona.edu/courses?page=1&cq="+"ISTA303"
-driver.implicitly_wait(5)
+driver.implicitly_wait(7)
 driver.get(courses)
       
 #Pressing the course button
@@ -816,7 +814,7 @@ immersive_tech.append([name.text,desc.text,unit.text])
 
 ##ISTA 320
 courses =  "https://catalog.arizona.edu/courses?page=1&cq="+"ISTA320"
-driver.implicitly_wait(5)
+driver.implicitly_wait(12)
 driver.get(courses)
 
 #Pressing the course button
@@ -847,7 +845,7 @@ immersive_tech.append([name.text,desc.text,unit.text])
 ##ISTA 330
 
 courses =  "https://catalog.arizona.edu/courses?page=1&cq="+"ISTA330"
-driver.implicitly_wait(5)
+driver.implicitly_wait(7)
 driver.get(courses)
     
 #Pressing the course button
@@ -877,7 +875,7 @@ immersive_tech.append([name.text,desc.text,unit.text])
 
 ##ISTA 350
 courses =  "https://catalog.arizona.edu/courses?page=1&cq="+"ISTA350"
-driver.implicitly_wait(5)
+driver.implicitly_wait(7)
 driver.get(courses)
     
 #Pressing the course button
@@ -907,7 +905,7 @@ immersive_tech.append([name.text,desc.text,unit.text])
 
 ##ISTA 403
 courses =  "https://catalog.arizona.edu/courses?page=1&cq="+ "ISTA403"
-driver.implicitly_wait(5)
+driver.implicitly_wait(7)
 driver.get(courses)
     
 #Pressing the course button
@@ -937,7 +935,7 @@ immersive_tech.append([name.text,desc.text,unit.text])
 
 ##ISTA 416
 courses =  "https://catalog.arizona.edu/courses?page=1&cq="+"ISTA416"
-driver.implicitly_wait(5)
+driver.implicitly_wait(7)
 driver.get(courses)
     
 #Pressing the course button
@@ -967,7 +965,7 @@ immersive_tech.append([name.text,desc.text,unit.text])
 
 ##ISTA 424
 courses =  "https://catalog.arizona.edu/courses?page=1&cq="+"ISTA424"
-driver.implicitly_wait(5)
+driver.implicitly_wait(7)
 driver.get(courses)
     
     
@@ -998,7 +996,7 @@ immersive_tech.append([name.text,desc.text,unit.text])
 
 ##ISTA 495
 courses =  "https://catalog.arizona.edu/courses?page=1&cq="+ "ISTA495"
-driver.implicitly_wait(5)
+driver.implicitly_wait(7)
 driver.get(courses)
     
 #Pressing the course button
@@ -1030,7 +1028,7 @@ immersive_tech.append([name.text,desc.text,unit.text])
 
 ##ESOC 300
 courses =  "https://catalog.arizona.edu/courses?page=1&cq="+ "ESOC300"
-driver.implicitly_wait(5)
+driver.implicitly_wait(7)
 driver.get(courses)
     
     
@@ -1061,7 +1059,7 @@ comp_arts.append([name.text,desc.text,unit.text])
 
 ##ESOC 340
 courses =  "https://catalog.arizona.edu/courses?page=1&cq="+ "ESOC340"
-driver.implicitly_wait(5)
+driver.implicitly_wait(7)
 driver.get(courses)    
     
 #Pressing the course button
@@ -1091,7 +1089,7 @@ comp_arts.append([name.text,desc.text,unit.text])
 
 ##ISTA 301
 courses =  "https://catalog.arizona.edu/courses?page=1&cq="+"ISTA301" 
-driver.implicitly_wait(5)
+driver.implicitly_wait(7)
 driver.get(courses)
     
     
@@ -1122,7 +1120,7 @@ comp_arts.append([name.text,desc.text,unit.text])
 
 ##ISTA 302
 courses =  "https://catalog.arizona.edu/courses?page=1&cq="+"ISTA302" 
-driver.implicitly_wait(5)
+driver.implicitly_wait(7)
 driver.get(courses)
     
     
@@ -1153,7 +1151,7 @@ comp_arts.append([name.text,desc.text,unit.text])
 
 ##ISTA 303
 courses =  "https://catalog.arizona.edu/courses?page=1&cq="+ "ISTA303"
-driver.implicitly_wait(5)
+driver.implicitly_wait(12)
 driver.get(courses)
     
 #Pressing the course button
@@ -1183,7 +1181,7 @@ comp_arts.append([name.text,desc.text,unit.text])
 
 ##ISTA 329
 courses =  "https://catalog.arizona.edu/courses?page=1&cq="+ "ISTA329"
-driver.implicitly_wait(5)
+driver.implicitly_wait(7)
 driver.get(courses)
     
 #Pressing the course button
@@ -1213,7 +1211,7 @@ comp_arts.append([name.text,desc.text,unit.text])
 
 ##ISTA 352
 courses =  "https://catalog.arizona.edu/courses?page=1&cq="+ "ISTA352"
-driver.implicitly_wait(5)
+driver.implicitly_wait(7)
 driver.get(courses)
     
 #Pressing the course button
@@ -1243,7 +1241,7 @@ comp_arts.append([name.text,desc.text,unit.text])
 
 ##ISTA 401
 courses =  "https://catalog.arizona.edu/courses?page=1&cq="+ "ISTA401"
-driver.implicitly_wait(5)
+driver.implicitly_wait(7)
 driver.get(courses)
       
 #Pressing the course button
@@ -1273,7 +1271,7 @@ comp_arts.append([name.text,desc.text,unit.text])
 
 ##ISTA 403
 courses =  "https://catalog.arizona.edu/courses?page=1&cq="+"ISTA403" 
-driver.implicitly_wait(5)
+driver.implicitly_wait(7)
 driver.get(courses)
     
     
@@ -1307,7 +1305,7 @@ comp_arts.append([name.text,desc.text,unit.text])
 
 ##ESOC 313
 courses =  "https://catalog.arizona.edu/courses?page=1&cq="+ "ESOC313"
-driver.implicitly_wait(5)
+driver.implicitly_wait(7)
 driver.get(courses)
     
 #Pressing the course button
@@ -1337,7 +1335,7 @@ soc.append([name.text,desc.text,unit.text])
 
 ##ESOC 314
 courses =  "https://catalog.arizona.edu/courses?page=1&cq="+"ESOC314" 
-driver.implicitly_wait(5)
+driver.implicitly_wait(7)
 driver.get(courses)
     
 #Pressing the course button
@@ -1368,7 +1366,7 @@ soc.append([name.text,desc.text,unit.text])
 
 ##ESOC 315
 courses =  "https://catalog.arizona.edu/courses?page=1&cq="+"ESOC315"
-driver.implicitly_wait(5) 
+driver.implicitly_wait(7) 
 driver.get(courses)
     
 #Pressing the course button
@@ -1398,7 +1396,7 @@ soc.append([name.text,desc.text,unit.text])
 
 ##ESOC 316
 courses =  "https://catalog.arizona.edu/courses?page=1&cq="+"ESOC316"
-driver.implicitly_wait(5) 
+driver.implicitly_wait(7) 
 driver.get(courses)
     
     
@@ -1430,6 +1428,7 @@ soc.append([name.text,desc.text,unit.text])
 
 ##ESOC 317
 courses =  "https://catalog.arizona.edu/courses?page=1&cq="+"ESOC317" 
+driver.implicitly_wait(7)
 driver.get(courses)
     
 #Pressing the course button
@@ -1460,7 +1459,7 @@ soc.append([name.text,desc.text,unit.text])
 
 ##ESOC 318
 courses =  "https://catalog.arizona.edu/courses?page=1&cq="+"ESOC318" 
-driver.implicitly_wait(5)
+driver.implicitly_wait(7)
 driver.get(courses)
     
 #Pressing the course button
@@ -1490,7 +1489,7 @@ soc.append([name.text,desc.text,unit.text])
 
 ##ESOC 319
 courses =  "https://catalog.arizona.edu/courses?page=1&cq="+"ESOC319" 
-driver.implicitly_wait(5)
+driver.implicitly_wait(7)
 driver.get(courses)
     
 #Pressing the course button
@@ -1520,7 +1519,7 @@ soc.append([name.text,desc.text,unit.text])
 
 ##ESOC 330
 courses =  "https://catalog.arizona.edu/courses?page=1&cq="+"ESOC330"
-driver.implicitly_wait(5) 
+driver.implicitly_wait(7) 
 driver.get(courses)
     
 #Pressing the course button
@@ -1551,7 +1550,7 @@ soc.append([name.text,desc.text,unit.text])
 ##ESOC 477
 
 courses =  "https://catalog.arizona.edu/courses?page=1&cq="+"ESOC477" 
-driver.implicitly_wait(5)
+driver.implicitly_wait(7)
 driver.get(courses)
     
 #Pressing the course button
@@ -1581,7 +1580,7 @@ soc.append([name.text,desc.text,unit.text])
 
 #ESOC 478
 courses =  "https://catalog.arizona.edu/courses?page=1&cq="+"ESOC478" 
-driver.implicitly_wait(5)
+driver.implicitly_wait(7)
 driver.get(courses)
     
 #Pressing the course button
@@ -1611,7 +1610,7 @@ soc.append([name.text,desc.text,unit.text])
 
 ##ESOC 495
 courses =  "https://catalog.arizona.edu/courses?page=1&cq="+"ESOC495" 
-driver.implicitly_wait(5)
+driver.implicitly_wait(7)
 driver.get(courses)
     
 #Pressing the course button
@@ -1644,7 +1643,7 @@ soc.append([name.text,desc.text,unit.text])
 
 ##ESOC 302
 courses =  "https://catalog.arizona.edu/courses?page=1&cq="+"ESOC302" 
-driver.implicitly_wait(5)
+driver.implicitly_wait(7)
 driver.get(courses)
     
 #Pressing the course button
@@ -1677,7 +1676,7 @@ research.append([name.text,desc.text,unit.text])
 
 ##ESOC 480
 courses =  "https://catalog.arizona.edu/courses?page=1&cq="+"ESOC480" 
-driver.implicitly_wait(5)
+driver.implicitly_wait(7)
 driver.get(courses)
     
     
@@ -1708,7 +1707,7 @@ engange.append([name.text,desc.text,unit.text])
 
 ##ISTA 498
 courses =  "https://catalog.arizona.edu/courses?page=1&cq="+"ISTA498"
-driver.implicitly_wait(5) 
+driver.implicitly_wait(7) 
 driver.get(courses)
 
 #Pressing the course button
@@ -1735,3 +1734,51 @@ for unit in course_unit:
     print(unit.text)
 
 engange.append([name.text,desc.text,unit.text])
+
+'''
+###Saving data to txt files
+
+
+##Core courses
+core_courses_file = open("course_courses.txt", "w")
+for core_info in core:
+    core_courses_file.write(core_info[0] + " : " + core_info[1] + " : " + core_info[2] + "\n")
+core_courses_file.close()
+
+##Data emphasis courses
+data_courses_file = open("data_courses.txt", "w")
+for data_info in data_science:
+    data_courses_file.write(data_info[0] + " : " + data_info[1] + " : " + data_info[2] + "\n")
+data_courses_file.close()
+
+##Immersive emphasis courses
+immersive_courses_file = open("immersive_courses.txt", "w")
+for immersive_info in immersive_tech:
+    immersive_courses_file.write(immersive_info[0] + " : " + immersive_info[1] + " : " + immersive_info[2] + "\n")
+immersive_courses_file.close()
+
+
+##Arts courses
+arts_courses_file = open("arts_courses.txt", "w")
+for arts_info in comp_arts:
+    arts_courses_file.write(arts_info[0] + " : " + arts_info[1] + " : " + arts_info[2] + "\n")
+arts_courses_file.close()
+
+##Soceity courses
+soc_courses_file = open("soc_courses.txt", "w")
+for soc_info in soc:
+    soc_courses_file.write(soc_info[0] + " : " + soc_info[1] + " : " + soc_info[2] + "\n")
+soc_courses_file.close()
+
+##Research courses
+res_courses_file = open("res_courses.txt", "w")
+for res_info in research:
+    res_courses_file.write(res_info[0] + " : " + res_info[1] + " : " + res_info[2] + "\n")
+res_courses_file.close()
+
+##Engagment courses
+eng_courses_file = open("eng_courses.txt", "w")
+for eng_info in engange:
+    eng_courses_file.write(eng_info[0] + " : " + eng_info[1] + " : " + eng_info[2] + "\n")
+eng_courses_file.close()
+'''
